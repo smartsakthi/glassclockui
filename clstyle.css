@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+
+}
+
+body
+{
+    display: flex;
+    justify-content: right;
+    width: 80%;
+    padding-left: 60px;
+    align-items: center;
+    min-height: 100vh;
+    background: #c4d1c900;
+    background-size: cover;
+    background-image: url('https://images.pling.com/img/00/00/52/38/08/1325323/ae21d16d1a46209c05987820c79e43bbfebd.jpg');
+    background-attachment: fixed;
+    
+    
+}
+
+
+
+.container
+{
+    position: relative;
+    
+    /* min-height: 500px; */ 
+    border-radius: 30px;
+    border-top-left-radius: 255px;
+    border-top-right-radius: 255px;
+    border-bottom-left-radius: 155px;
+    border-bottom-right-radius: 155px;
+    border-top: 1px solid rgba(255,255,255,0.02);
+    border-left: 1px solid rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+    border-right: 1px solid rgba(255,255,255,0.02);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(3px);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.903);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    
+
+}
+.clock
+{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background: #5e42cad9;
+    
+    border-radius: 50%;
+    border-top: 1px solid rgba(255,255,255,0.02);
+    border-left: 1px solid rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255,255,255,0.02);
+    border-right: 1px solid rgba(255,255,255,0.02);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.05);
+    
+}
+.clock::before
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #2f363e;
+    border: 3px solid #ffff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock span
+{
+    position: absolute;
+    inset: 20px;
+    color: #ffff;
+    text-align: center;
+    transform: rotate(calc(30deg* var(--i)));
+}
+.clock span b{
+    font-size: 2em;
+    opacity: 0.75;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+
+}
+
+
+.circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(0,0,0,0.25);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+
+}
+
+
+.circle i{
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: var(--clr);
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scale(0.5);
+    
+}
+
+
+
+.circle:nth-child(1) i
+{
+    width: 2px;
+}
+
+
+.circle:nth-child(2) i
+{
+    width: 6px;
+}
+
+
+
+.circle2
+{
+    width: 240px;
+    height: 240px;
+    z-index: 9;
+
+}
+
+.circle3
+{
+    width: 180px;
+    height: 180px;
+    z-index: 8;
+}
+
+
+.circle::before
+{
+    content: '';
+    position: absolute;
+    top: -8.8px;
+    
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow:  0 0 20px var(--clr),
+    0  0  60px var(--clr);
+
+}
+
+
+
+
+/* digital clock style */
+
+
+#time
+{
+    margin-bottom: 40px;
+    display: flex;
+    padding: 10px 20px;
+    font-size: 2em;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.903);
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(230, 230, 230, 0.079),
+    
+    inset 5px 5px 20px rgba(213, 213, 213, 0),
+    inset -5px -5px 15px rgba(223, 223, 223, 0);
+    
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    
+
+
+}
+
+
+
+
+#time div
+{
+    position: relative;
+    width: 60px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--clr);
+
+}
+
+#time div:nth-child(1)::after,
+#time div:nth-child(2)::after
+{
+    content: ':';
+    position: absolute;
+    right: -4px;
+
+}
+
+
+#time div:last-child
+{
+    font-size: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+
+
+}
+#time div:nth-child(2)::after
+{
+    animation: animate 1s steps(1) infinite;
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        opacity: 1;
+
+    }
+    50%
+    {
+        opacity: 0;
+    }
+}
+
+
+
