@@ -27,14 +27,12 @@ body
 
 .name
 {
-    width: 4%;
-    height:100%;
-    top: 40%;
    
-    color: rgb(255, 255, 255);
-    position: relative;
-    text-align: left;
-    font-size: 7rem;
+  color: #ffff;
+  font-size: 2rem;
+  position: relative;
+  text-align: left;
+  padding-right: 50px;
 }
 
 
